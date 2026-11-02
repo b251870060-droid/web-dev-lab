@@ -1,0 +1,18 @@
+</DOCTYPE html> 
+<html lang = "en"
+
+<body>
+    <form>
+        <h2>HTML Forms</h2>
+        <br>
+        Enter your name :
+        <br>
+            <label for="fname">first name:</label><br>
+            <input type = "text" id="fname" name="fname" value="code"><br>
+            <label for="lname">last name:</label><br>
+            <input type="text" id="lname" name ="lname" value="March">
+        <br><br>
+        Enter your email:
+        <input type="email"><br><br>
+        Do you exercise at the home?
+        <br>

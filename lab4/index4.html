@@ -3,66 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лаб 4 - CSS Flexbox & Grid Layout</title>
+    <title>Миний гэрэл зургийн ертөнц - Lab 4</title>
     <link rel="stylesheet" href="style4.css">
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header class="header">
-        <h1>Веб хөгжүүлэлт</h1>
+    <!-- Header & Navigation (Flexbox) -->
+    <header class="site-header">
+        <div class="logo">📸 My Photography</div>
+        <nav class="nav-bar">
+            <a href="#">Нүүр</a>
+            <a href="#">Галерей</a>
+            <a href="#">Миний тухай</a>
+            <a href="#contact">Холбоо барих</a>
+        </nav>
     </header>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <a href="index4.html">Нүүр</a>
-        <a href="medee.html">Мэдээ</a>
-        <a href="#">Үйлчилгээ</a>
-        <a href="contact.html">Холбоо барих</a>
-    
-    </nav>
-
     <!-- Main Container -->
-    <div class="container">
+    <div class="main-container">
         
-        <!-- Sidebar -->
+        <!-- Sidebar: Унадаг (dropdown) ангиллын цэс -->
         <aside class="sidebar">
-            <h3>Цэс</h3>
-            <ul>
-                <li><a href="github.zaavar.html">Github хуудас нээх заавар </a></li>
-                <li><a href="../index2.html">Форм бүртгэл</a></li>
-                <li><a href="#">CSS загварчлал</a></li>
-                <li><a href="#">Flexbox&Grid</a></li>
-                <li><a href="#">Жишээ кодууд</a></li>
-            </ul>
+            <details open>
+                <summary><h3> Ангилал</h3></summary>
+                <ul>
+                    <li><a href="#">🌄 Байгаль</a></li>
+                    <li><a href="#">👤 Хөрөг зураг</a></li>
+                    <li><a href="#">🏙️ Гудамжны хэмнэл</a></li>
+                    <li><a href="#">🏛️ Архитектур</a></li>
+                </ul>
+            </details>
+            
+            
         </aside>
 
-        <!-- Main Content Area -->
-        <main class="main-content">
-            <h2>Үндсэн Агуулга</h2>
-            
-            <!-- Cards Grid (3 Column Grid Layout) -->
-            <div class="card-grid">
+        <!-- Main Content (Зургийн грид галерей) -->
+        <main class="content">
+            <h2>Миний авсан зургууд</h2>
+            <div class="grid-gallery">
                 <div class="card">
-                    <h3>Танилцуулга</h3>
-                    <p>Энэхүү веб хуудас нь Вэб хөгжүүлэлтийн хичээлээр үзсэн HTML5, CSS3, Flexbox болон Grid системүүдийг туршин хийсэн лабораторийн ажлуудын эмхэтгэл юм.</p>
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500" alt="Байгаль">
                 </div>
                 <div class="card">
-                    <h3>Зорилго</h3>
-                    <p>Би орчин үеийн веб хөгжүүлэлтийн үндсэн технологиудыг ашиглан хэрэглэгчдэд ойлгомжтой, хариу үйлдэл үзүүлдэг responsive бүтэцтэй сайт хийхэд суралцаж байгаа.</p>
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500" alt="Хөрөг">
                 </div>
                 <div class="card">
-                    <h3>Ашигласан технологи</h3>
-                    <p>Git, GitHub Pages, HTML5, CSS Flexbox болон Grid системүүдийг ашиглан туршилтын веб сайт бүтээв. Цаашдаа хөгжүүлэлт хийж илүү боловсронгуй, хэрэгцээтэй бодит болгоход анхаарах болно.</p>
+                    <img src="https://images.unsplash.com/photo-1477959858617-67f30ac4ce78?w=500" alt="Гудамж">
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500" alt="Архитектур">
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=500" alt="Аялал">
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=500" alt="Ан амьтан">
                 </div>
             </div>
         </main>
-
     </div>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>&copy; 2026 Бүх эрх хуулиар хамгаалагдсан.</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Гэрэл зургийн портфолио. Лаборатори 4 - Flexbox & Grid Layout.</p>
     </footer>
 
 </body>

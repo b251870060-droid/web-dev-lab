@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header & Flexbox Navigation */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e24;
+    color: #fff;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-bar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-bar a:hover {
+    color: #ff6b6b;
+}
+
+/* Main Container (Flexbox ашиглан Sidebar болон Content-ийг зэрэгцүүлэх) */
+.main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Sidebar загвар */
+.sidebar {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    height: fit-content;
+}
+
+/* Sidebar доторх унадаг (details/summary) цэсний загвар */
+.sidebar details {
+    cursor: pointer;
+}
+
+.sidebar details summary {
+    list-style: none; /* Стандарт сумыг арилгах */
+    outline: none;
+    font-size: 1.1rem;
+    color: #1e1e24;
+}
+
+.sidebar details summary::-webkit-details-marker {
+    display: none; /* Chrome/Safari дээрх сумыг нуух */
+}
+
+.sidebar details summary h3 {
+    display: inline-block;
+}
+
+.sidebar details ul {
+    margin-top: 12px;
+    padding-left: 10px;
+    list-style: none;
+}
+
+.sidebar details ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar details ul li a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.2s;
+    font-size: 0.95rem;
+}
+
+.sidebar details ul li a:hover {
+    color: #ff6b6b;
+}
+
+/* Content & CSS Grid (3 баганатай зургийн галери) */
+.content {
+    flex: 3;
+}
+
+.content h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #1e1e24;
+}
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 багана */
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    background-color: #1e1e24;
+    color: #aaa;
+    padding: 20px;
+    margin-top: 50px;
+}
+/* --- ЛАБ 5: RESPONSIVE DESIGN (Media Queries) --- */
+
+/* 1. Таблет болон дунд хэмжээтэй дэлгэц (max-width: 900px) */
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column; /* Хажуугийн цэс болон зургуудыг дээр доороо байрлуулна */
+    }
+
+    .grid-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Зургийн гридийг 3 баганаас 2 багана болгож багасгана */
+    }
+}
+
+/* 2. Гар утас болон жижиг дэлгэц (max-width: 600px) */
+@media (max-width: 600px) {
+    .site-header {
+        flex-direction: column; /* Дээд хэсгийн логорит болон цэсийг босоо байрлалд оруулна */
+        gap: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .nav-bar {
+        flex-direction: column; /* Навигацийн холбоосуудыг босоо байдлаар голлуулна */
+        gap: 10px;
+    }
+
+    .grid-gallery {
+        grid-template-columns: 1fr; /* Гар утсан дээр зургууд 1 баганаар (бүтэн өргөнөөр) үргэлжилнэ */
+    }
+
+    .main-container {
+        padding: 0 10px;
+        margin: 15px auto;
+    }
+}
