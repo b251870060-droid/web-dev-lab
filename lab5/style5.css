@@ -2,8 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Cambria', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 body {
     background-color: #f4f4f9;
@@ -35,10 +36,6 @@ body {
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s;
-}
-
-.nav-bar a:hover {
-    color: #ff6b6b;
 }
 
 /* Main Container (Flexbox ашиглан Sidebar болон Content-ийг зэрэгцүүлэх) */
@@ -126,9 +123,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-}
 
 .card img {
     width: 100%;

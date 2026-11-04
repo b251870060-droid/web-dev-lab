@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Миний гэрэл зургийн ертөнц - Lab 6</title>
+    <link rel="stylesheet" href="style6.css">
+</head>
+<body>
+
+    <!-- Header & Navigation (Flexbox) -->
+    <header class="site-header">
+        <div class="logo"> Дурсамжийн цуглуулга </div>
+        <!-- Dark Mode солих товчлуур -->
+        <nav class="nav-bar">
+            <a href="index6.html">Нүүр </a>
+            <a href="#">Миний тухай</a>
+            <a href="#contact">Холбоо барих</a>
+             <button id="theme-toggle" style="margin-left: 20px; padding: 6px 12px; cursor: pointer;">🌙 Горим солих</button>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        
+        <!-- Sidebar: Унадаг (dropdown) ангиллын цэс -->
+        <aside class="sidebar">
+            <details open>
+                <summary><h3> Ангилал</h3></summary>
+                <ul>
+                    <li><a href="#">🌄 Байгаль</a></li>
+                    <li><a href="#">🐼Cute animals</a></li>
+                    <li><a href="#">🏙️ Pinterest random aesthetic</a></li>
+                </ul>
+            </details>
+        </aside>
+     
+        <main class="content">
+            <h2>Янз бүрийн зургууд </h2>
+            <div class="grid-gallery">
+                
+                <!-- 1 дүгээр карт (--i stagger эффекттэй) -->
+                <div class="flip-card" style="--i: 1;">
+                    <div class="flip-card-inner">    
+                        <div class="flip-card-front">
+                            <img src="/lab4/images/uul.jpg" alt="Уул">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Манан</h3>
+                            <p>Бараа жижиг ч нөмөр дулаанд өвөлжөөний минь уулс өглөө оройдоо мананд хучигдан дүнхийдэгсэн.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 дугаар карт -->
+                <div class="flip-card" style="--i: 2;">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="/lab4/images/image2.jpg" alt="Дэлгүүр">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Өвөрмөц дэлгүүр</h3>
+                            <p>Ажлын хажуугийн "Little Venice" дэлгүүрт орохоор нэг гоё тайван, гадаад орчноос тусгаарлагдаж, музей, эсвэл Парисын нэг гудманд явж байгаа юм шиг санагддаг.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 дугаар карт -->
+                <div class="flip-card" style="--i: 3;">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="/lab4/images/huduu.jpeg" alt="Хөдөө">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3> Дулаахан намар </h3>
+                            <p> Гэрээ санасан үедээ харж тайвширдаг зураг</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 дүгээр карт -->
+                <div class="flip-card" style="--i: 4;">
+                     <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="/lab4/images/nuur2.jpg" alt="Нуур">
+                        </div>
+                        <div class="flip-card-back">
+                             <h3> Зуслангийн жижиг нуур </h3>
+                            <p> Зуны халуун өдөр нуурын эргээр морьтой шогшуулж явахдаа </p>
+                       </div>
+                    </div>
+                </div>
+
+                <!-- 5 дугаар карт -->
+                <div class="flip-card" style="--i: 5;">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="/lab4/images/street.jpg" alt="Гудамж">
+                       </div>
+                        <div class="flip-card-back">
+                            <h3>Гудамжны өнгө</h3>
+                            <p>Оройн хотын чимээгүй бас гэрэлтэй мөч.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6 дугаар карт -->
+                <div class="flip-card" style="--i: 6;">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="/lab5/images/sartai shunu.jpg" alt="Шөнө">
+                       </div>
+                        <div class="flip-card-back">
+                            <h3>Өвлийн сартай шөнө</h3>
+                            <p>Өвөл шөнө болгон ээждээ тором ивэлгэж, ингэ саахад нь тусалдаг. Тэр үедээ сар гоё харагдаад л </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Lab 6 Мультимедиа шаардлага (Видео ба Track) -->
+            <section class="video-section" style="margin-top: 40px;">
+                <h2>Миний танилцуулга видео</h2>
+                <video controls width="100%" style="max-width: 600px; border-radius: 8px;">
+                    <source src="video/clip.mp4" type="video/mp4">
+                    <source src="video/clip.webm" type="video/webm">
+                    <track src="video/clip.mn.vtt" kind="subtitles" srclang="mn" label="Mongolian">
+                    Таны браузер видеог дэмжихгүй байна.
+                </video>
+            </section>
+
+        </main> 
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Веб зохиомж хичээлийн лабораторийн ажил</p>
+    </footer>
+
+    <!-- Lab 6 JavaScript холболт -->
+    <script src="script.js"></script>
+</body>
+</html>
